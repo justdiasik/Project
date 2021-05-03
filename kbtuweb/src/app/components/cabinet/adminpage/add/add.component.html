@@ -1,0 +1,145 @@
+<div class="addProduct">
+
+    <h6> Sample ImgLink: https://miro.medium.com/max/3840/1*U-R58ahr5dtAvtSLGK2wXg.png</h6>
+    <h6>Add Recipe</h6>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Categories</label>
+        </div>
+        <select #cat class="custom-select" [(ngModel)]="selectedItem" id="inputGroupSelect01">
+          <option *ngFor="let cat of categories" [ngValue]="cat.id">{{cat.name}}</option>
+        </select>
+    </div>
+    <div class="form2">
+
+        <div class="form-inline">
+
+            <br>
+            <label for="inputPassword6">Name</label>
+
+            <div class="form-group">
+
+                <input #name type="text" id="inputPassword6" class="form-control">
+            </div>
+            <label for="inputPassword6">Rating</label>
+
+            <div class="form-group">
+
+                <input #rating type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="0.0">
+            </div>
+            <label for="inputPassword6">Time</label>
+
+            <div class="form-group">
+
+                <input #time type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="0 hour 0 mins">
+            </div>
+            <label for="inputPassword6">Description</label>
+
+            <div class="form-group">
+
+                <input #description type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <label for="inputPassword6">Image link</label>
+
+            <div class="form-group">
+
+                <input #img type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="https://">
+            </div>
+            <label for="inputPassword6">Ingredients</label>
+
+            <div class="form-group">
+
+                <input #ing type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="ing1,ing2,ing3">
+            </div>
+            <label for="inputPassword6">Methods</label>
+
+            <div class="form-group">
+
+                <input #methods type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="method1,method2,method3">
+            </div>
+
+            <button class="btn btn-primary saveBtn" (click)="add(getSelectedItem(), name.value, time.value, description.value, rating.value, img.value, ing.value, methods.value)">Add</button>
+
+            <button class="btn btn-primary saveBtn" routerLink="/categories/{{getSelectedItem()}}/products">view changes</button>
+        </div>
+    </div>
+
+</div>
+<div class="addCategory">
+    <h6>Add Category</h6>
+
+    <div class="form2">
+
+        <div class="form-inline">
+
+            <br>
+            <label for="inputPassword6">Name</label>
+
+            <div class="form-group">
+
+                <input #name2 type="text" id="inputPassword6" class="form-control">
+            </div>
+            <label for="inputPassword6">Time</label>
+
+            <div class="form-group">
+
+                <input #time2 type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="0 hour 0 mins">
+            </div>
+            <label for="inputPassword6">Image Link</label>
+
+            <div class="form-group">
+
+                <input #link2 type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="https://">
+            </div>
+
+            <button class="btn btn-primary saveBtn" (click)="addCategory(name2.value, time2.value, link2.value)">Add</button>
+            <button class="btn btn-primary saveBtn" routerLink="/categories">view changes</button>
+        </div>
+    </div>
+</div>
+
+<div class="addUser">
+    <h6>Add User</h6>
+
+    <div class="form2">
+
+        <div class="form-inline">
+
+            <br>
+            <label for="inputPassword6">Name</label>
+
+            <div class="form-group">
+
+                <input #username type="text" id="inputPassword6" class="form-control">
+            </div>
+            <label for="inputPassword6">Lastname</label>
+
+            <div class="form-group">
+
+                <input #lname type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <label for="inputPassword6">Username</label>
+
+            <div class="form-group">
+
+                <input #login type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+
+            <label for="inputPassword6">Password</label>
+
+            <div class="form-group">
+
+                <input #password type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <label for="inputPassword6">isSuperUser?</label>
+
+            <div class="form-group">
+
+                <input #is type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="true or false">
+            </div>
+            <button class="btn btn-primary saveBtn" (click)="addUser(username.value, lname.value,login.value,password.value, is.value)">Add</button>
+            <button class="btn btn-primary saveBtn" routerLink="/adminpage/users">view changes</button>
+
+        </div>
+    </div>
+</div>

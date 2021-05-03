@@ -1,0 +1,19 @@
+<div>
+    SOME FOOD RECIPES
+
+    <!-- 10 products -->
+    <div class="flex-row-container">
+        <div class="flex-row-item" *ngFor="let item of items">
+            <!-- <a routerLink="/products/{{item.id}}" [title]="item.name">
+            {{ item.name }}
+          </a> -->
+            <app-product-item [item]="item">
+
+            </app-product-item>
+
+        </div>
+    </div>
+    <!-- 10 products -->
+
+
+</div>

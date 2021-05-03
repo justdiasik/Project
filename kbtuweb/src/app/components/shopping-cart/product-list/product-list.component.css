@@ -1,0 +1,16 @@
+.flex-row-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-row-item {
+    flex-grow: 1;
+    width: 33%;
+    height: 100px;
+    margin-bottom: 200px;
+    text-align: center;
+    border-radius: 3px;
+}

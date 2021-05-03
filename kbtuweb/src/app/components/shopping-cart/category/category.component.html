@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="flex-row-container">
+    <div class="flex-row-item" *ngFor="let category of categories">
+        <div routerLink="/categories/{{category.id}}/products" id="box1">
+            <img class="photoSize" src="{{category.img_link}}">
+            <p class="featured-images"></p>
+            <p class="featured-images"><span class="active">{{category.time}}</span></p>
+            <div class=" w3-black w3-center">
+                <h5 class="w3-allerta">{{category.name}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

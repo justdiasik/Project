@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+
+
+
+
+
+        <div class="col-md-auto leftside">
+            _____________Choose____________
+            <ul class="list-group">
+                <li class="list-group-item liWidth" id="category" (click)="categoryItem()">Categories</li>
+                <li class="list-group-item liWidth" id="recipe" (click)="recipeItem()">Recipes</li>
+            </ul>
+
+            <div id="editPanel">
+                <!-- <label for="inputPassword6">Name</label>
+                <div class="form-group">
+                    <input [(ngModel)]="category2.name" type="text" id="inputPassword6" class="form-control">
+                </div>
+                <label for="inputPassword6">Time</label>
+                <div class="form-group">
+                    <input [(ngModel)]="category2.time" type="text" id="inputPassword6" class="form-control">
+                </div> -->
+            </div>
+        </div>
+
+
+
+
+        <div class="col rightside">
+            <div id="recipes">
+                Recipes
+                <div class="flex-row-container">
+                    <div class="flex-row-item" *ngFor="let item of items">
+                        <div class="card cardSize">
+                            <img src="{{item.image}}" class="photoSize card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">{{item.name}}</p>
+                                <a class="btn btn-primary btnBottom" (click)="deleteProduct(item)">Delete it</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="categories">
+                Categories
+                <div class="flex-row-container">
+                    <div class="flex-row-item" *ngFor="let category of categories">
+                        <div class="card cardSize">
+                            <img src="{{category.img_link}}" class="photoSize card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">{{category.name}}</p>
+                                <p class="card-title">{{category.time}}</p>
+                                <a class="btn btn-primary btnBottom2" (click)="deleteCategory(category)">Delete it</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

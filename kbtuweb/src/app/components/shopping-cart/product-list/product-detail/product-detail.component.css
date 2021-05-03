@@ -1,0 +1,170 @@
+#whatsapp,
+#telegram {
+    width: 40px;
+    height: 40px;
+}
+
+#rating {
+    width: 20px;
+    height: 20px;
+}
+
+.photoSize {
+    width: 350px;
+    height: 350px;
+    transition: transform .25s ease;
+}
+
+
+/* ----------------------------------------- */
+
+.first {
+    position: absolute;
+}
+
+.mySlides {
+    display: none;
+    position: absolute;
+    margin-left: 50px;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.0s;
+    animation-name: fade;
+    animation-duration: 2.0s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 2
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 2
+    }
+}
+
+
+/* ----------------------------------------- */
+
+.photoSize:hover {
+    transform: scale(1.05);
+}
+
+.main1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px 100px;
+    grid-gap: 80px;
+    padding: 10px;
+    margin-bottom: 90px;
+}
+
+a {
+    color: rgb(94, 95, 95);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(237, 116, 111);
+}
+
+.photo1 {
+    float: left;
+    width: 300px;
+}
+
+.context1 {
+    float: right;
+    width: 500px;
+}
+
+.recipe {
+    width: 800px;
+    height: max-content;
+    margin-left: 20px;
+}
+
+.ingredients {
+    width: 380px;
+    height: max-content;
+    float: left;
+}
+
+.methods {
+    width: 400px;
+    height: max-content;
+    float: right;
+    background-color: white;
+}
+
+.rectangle {
+    border: 3px solid rgb(234, 234, 234);
+    width: 380px;
+    height: max-content;
+    padding: 20px;
+}
+
+.ingredientsItems {
+    background-color: rgb(219, 234, 234);
+    padding: 5px;
+}
+
+.method-in {
+    padding: 5px;
+}
+
+.method-text {}
+
+.featured-images {
+    position: relative;
+    color: #666666;
+}
+
+.featured-images span {
+    color: #666666;
+    background: white;
+    padding: 0 2px;
+}
+
+.featured-images:after {
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: #666666;
+    left: 0;
+    margin-top: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+hr.new3 {
+    border-top: 1px dashed #666666;
+}
+
+hr.new1 {
+    border-top: 1px solid #666666;
+}
+
+.rightClmn {
+    width: 900px;
+    height: max-content;
+    position: relative;
+    margin-top: 881px;
+}
+
+.photoComment {
+    width: 80px;
+    height: 80px;
+}

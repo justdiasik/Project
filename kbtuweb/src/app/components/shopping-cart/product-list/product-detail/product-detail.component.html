@@ -1,0 +1,96 @@
+<div class="col-md-4">
+
+    <div class="main1">
+        <!-- --------------------------------------------------------------------------------------------------------- -->
+        <div class="photo1">
+            <a title="ммм еда" target="_blank">
+                <img class="photoSize" src="{{ item.image }}">
+            </a>
+        </div>
+
+        <!-- --------------------------------------------------------------------------------------------------------- -->
+        <div class="context1">
+            <h3>
+                <a id="title" title="ммм еда" target="_blank"> {{ item.name }}</a>
+            </h3>
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <p *ngIf="item.rating">
+                <img id="rating" src=""> {{ item.rating }}
+            </p>
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <h6 style="font-weight: bolder;">Cook: </h6>{{item.time}}
+            <h6 style="font-weight: bolder;">Level: </h6>{{this.getCategory(item.category_id)}}
+            <h6 style="font-weight: bolder;">Description: </h6>
+            <p *ngIf="item.description">
+                <!-- Bakosta -->
+                {{item.description}}
+            </p>
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+            <div class="share1">
+                <a target="_blank" href="https://api.whatsapp.com/send?text=See%20this!%20url=" data-action="share/whatsapp/share">
+                    <img id="whatsapp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1024px-WhatsApp_logo-color-vertical.svg.png">
+                </a>
+
+                <a target="_blank" href="https://t.me/share/url?url=" data-action="share/whatsapp/share">
+                    <img id="telegram" src="https://image.winudf.com/v2/image1/Y29tLndXaGF0c2FwcGpiXzg2MTY3NTRfaWNvbl8xNTUwNzI3OTE1XzA1OA/icon.png?w=170&fakeurl=1">
+                </a>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------------- -->
+        </div>
+        <!-- --------------------------------------------------------------------------------------------------------- -->
+    </div>
+    <br>
+</div>
+
+<!-- Ingredients and Methods -->
+<div class="recipe">
+
+    <div class="ingredients" *ngIf="item.ingredients">
+        <h4>Ingredients</h4>
+        <hr class="new3">
+        <div class="rectangle">
+            <div *ngFor="let ings of this.split(item.ingredients); let indexOf = index;">
+                <div class="ingredientsItems" [style.background]="getColor(indexOf)">
+                    {{ings}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="methods" *ngIf="item.methods">
+        <h4>Methods</h4>
+        <hr class="new3">
+        <div class="method-in">
+            <div *ngFor="let method of  this.split(item.methods); let cnt = index;">
+                <div class="method-text">
+                    <p><strong>{{cnt+1}}. </strong>{{method}}</p>
+                    <hr class="new1">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- COMMENTS -->
+<div class="rightClmn">
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Your comment:</span>
+        </div>
+        <textarea #comment class="form-control" aria-label="With textarea"></textarea>
+        <button type="button" class="btn btn-dark" (click)="sendComment('Anonymous',comment.value); comment.value=' '">Send</button>
+    </div>
+
+
+    <ul class="list-unstyled">
+        <li class="media" *ngFor="let comment of comments">
+            <img src="https://logodix.com/logo/1070482.jpg" class="mr-3 photoComment" alt="...">
+            <div class="media-body">
+                <h5 class="mt-0 mb-1">{{comment.login}}</h5>
+                {{comment.text}}
+                <br><small>Posted Date: {{comment.date}}</small>
+            </div>
+        </li>
+    </ul>
+</div>

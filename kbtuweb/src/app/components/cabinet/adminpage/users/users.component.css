@@ -1,0 +1,9 @@
+.super {
+    background-color: green;
+    width: 20px;
+}
+
+.not_super {
+    background-color: red;
+    width: 20px;
+}

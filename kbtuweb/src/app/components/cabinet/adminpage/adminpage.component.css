@@ -1,0 +1,55 @@
+.main {
+    width: 1200px;
+    height: max-content;
+    margin: 0 auto;
+}
+
+.buttons {
+    margin-top: 110px;
+    margin: 110px auto;
+    width: 800px;
+    height: 90px;
+    padding-left: 0px;
+}
+
+.btn-style {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto;
+    border: none;
+    width: 150px;
+    padding: 16px 32px;
+    margin-right: 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.7s;
+    cursor: pointer;
+    background-color: rgb(25, 17, 11);
+    color: white;
+}
+
+.btn-style:hover {
+    background-color: rgb(234, 232, 228);
+    color: rgb(25, 17, 11);
+}
+
+#add:hover {
+    /* box-shadow: 0 8px 16px 0 rgba(0, 255, 30, 0.34), 0 6px 20px 0 rgba(103, 231, 12, 0.272); */
+    box-shadow: 0 0 10px #13CA91, 0 0 40px #13CA91, 0 0 80px #13CA91;
+    background-color: #13CA91;
+}
+
+#delete:hover {
+    box-shadow: 0 0 10px #ff6f61, 0 0 40px #ff6f61, 0 0 80px #ff6f61;
+    background-color: #ff6f61;
+    /* box-shadow: 0 8px 16px 0 rgba(251, 255, 0, 0.251), 0 6px 20px 0 rgba(231, 12, 12, 0.707); */
+}
+
+#edit:hover {
+    box-shadow: 0 0 10px #08F7FE, 0 0 40px #08F7FE, 0 0 80px #08F7FE;
+    background-color: #08F7FE;
+}
+
+
+/*  */

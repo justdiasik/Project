@@ -1,0 +1,25 @@
+<div class="users">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Login</th>
+                <th scope="col">Password</th>
+                <th scope="col">isSuperUser</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let user of users; let idx = index">
+                <th scope="row">{{idx+1}}</th>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.username}}</td>
+                <td>encrypted</td>
+                <td class="{{this.colorSupeUsers(user.is_superuser)}}">{{user.is_superuser}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

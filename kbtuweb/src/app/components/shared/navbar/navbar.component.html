@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">LIGE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Collections</a>
+            </li>
+
+            <!-- ------------------------------CATEGORIES---------------------------------------------------- -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-content" aria-labelledby="navbarDropdown">
+                    <div *ngFor="let category of categories">
+                        <a routerLink="/categories/{{category.id}}/products" class="dropdown-item" href="#">{{category.name}}</a>
+                    </div>
+                </div>
+            </li>
+            <!-- ------------------------------CATEGORIES---------------------------------------------------- -->
+
+            <li class="nav-item">
+                <a class="nav-link ">Sponsors</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <h5 id="h5Hide">Welcome, {{this.getUser()}}!</h5><br>
+            <button id="btnHide" class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="logout()" routerLink="/signinpage">Sign in</button>
+            <button id="h5Hide2" class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="" (click)="logout()">Log Out</button>
+
+        </form>
+    </div>
+</nav>
